@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" >
+		<title>PorMedTec</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="i/favicon.png" type="image/x-icon">
+		<!-- AOS 3.0.0-beta.6 plugin CSS (Animations) -->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&subset=latin&display=swap" rel="stylesheet">
+		<!-- Startup CSS + Bootstrap CSS (Styles for all blocks) - Remove ".min" if you want to edit a css code -->
+		<link href="css/styles.css" rel="stylesheet" />
+		<!-- jQuery 3.6.0 (uncomment line below if you need jQuery) -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+	</head> 
+	<body>
+	<!-- Navigation -->
+	<nav class="sticky-top py-lg-7 py-2">
+		<div class="d-block d-lg-none">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="text-center col-4 ps-7 pe-2" data-aos="fade-down" data-aos-delay="0">
+						<a href="#" class="float-start">
+							<img src="i/logo.svg" alt="" class="w-100 float-start" data-aos="fade-down" data-aos-delay="0" srcset="i/logo.svg 2x">
+						</a>
+					</div>
+					<div class="col-4" data-aos="fade-down" data-aos-delay="500">
+					</div>
+					<div class="col-4" data-aos="fade-down" data-aos-delay="250">
+						<a href="#" class="btn d-lg-none custom-mobile-nav-btn font-body fs-5 btn-width-equal-height bg-bg-3 float-end" data-bs-toggle="offcanvas" data-bs-target="#custom-id-f99iwd8u">
+							<svg width="26" height="26" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-dark-2">
+								<path d="M2.00016 5.33333H14.0002C14.177 5.33333 14.3465 5.2631 14.4716 5.13807C14.5966 5.01305 14.6668 4.84348 14.6668 4.66667C14.6668 4.48986 14.5966 4.32029 14.4716 4.19526C14.3465 4.07024 14.177 4 14.0002 4H2.00016C1.82335 4 1.65378 4.07024 1.52876 4.19526C1.40373 4.32029 1.3335 4.48986 1.3335 4.66667C1.3335 4.84348 1.40373 5.01305 1.52876 5.13807C1.65378 5.2631 1.82335 5.33333 2.00016 5.33333ZM14.0002 10.6667H2.00016C1.82335 10.6667 1.65378 10.7369 1.52876 10.8619C1.40373 10.987 1.3335 11.1565 1.3335 11.3333C1.3335 11.5101 1.40373 11.6797 1.52876 11.8047C1.65378 11.9298 1.82335 12 2.00016 12H14.0002C14.177 12 14.3465 11.9298 14.4716 11.8047C14.5966 11.6797 14.6668 11.5101 14.6668 11.3333C14.6668 11.1565 14.5966 10.987 14.4716 10.8619C14.3465 10.7369 14.177 10.6667 14.0002 10.6667ZM14.0002 7.33333H2.00016C1.82335 7.33333 1.65378 7.40357 1.52876 7.5286C1.40373 7.65362 1.3335 7.82319 1.3335 8C1.3335 8.17681 1.40373 8.34638 1.52876 8.4714C1.65378 8.59643 1.82335 8.66667 2.00016 8.66667H14.0002C14.177 8.66667 14.3465 8.59643 14.4716 8.4714C14.5966 8.34638 14.6668 8.17681 14.6668 8C14.6668 7.82319 14.5966 7.65362 14.4716 7.5286C14.3465 7.40357 14.177 7.33333 14.0002 7.33333Z">
+								</path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="offcanvas offcanvas-start bg-dark-2" id="custom-id-f99iwd8u" aria-hidden="true">
+			<div class="offcanvas-header">
+				<a href="#" class="w-50">
+					<img src="i/logow.svg" alt="" class="img-fluid w-auto" srcset="i/logow.svg 2x">				
+				</a>
+				<a href="#" class="btn btn-sm btn-width-equal-height" data-bs-dismiss="offcanvas">
+					<svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-action-8">
+						<path d="M8.9398 8L13.1398 3.80667C13.2653 3.68113 13.3359 3.51087 13.3359 3.33333C13.3359 3.1558 13.2653 2.98554 13.1398 2.86C13.0143 2.73447 12.844 2.66394 12.6665 2.66394C12.4889 2.66394 12.3187 2.73447 12.1931 2.86L7.9998 7.06L3.80646 2.86C3.68093 2.73447 3.51066 2.66394 3.33313 2.66394C3.1556 2.66394 2.98533 2.73447 2.8598 2.86C2.73426 2.98554 2.66374 3.1558 2.66374 3.33333C2.66374 3.51087 2.73426 3.68113 2.8598 3.80667L7.0598 8L2.8598 12.1933C2.79731 12.2553 2.74771 12.329 2.71387 12.4103C2.68002 12.4915 2.6626 12.5787 2.6626 12.6667C2.6626 12.7547 2.68002 12.8418 2.71387 12.9231C2.74771 13.0043 2.79731 13.078 2.8598 13.14C2.92177 13.2025 2.99551 13.2521 3.07675 13.2859C3.15798 13.3198 3.24512 13.3372 3.33313 13.3372C3.42114 13.3372 3.50827 13.3198 3.58951 13.2859C3.67075 13.2521 3.74449 13.2025 3.80646 13.14L7.9998 8.94L12.1931 13.14C12.2551 13.2025 12.3288 13.2521 12.4101 13.2859C12.4913 13.3198 12.5785 13.3372 12.6665 13.3372C12.7545 13.3372 12.8416 13.3198 12.9228 13.2859C13.0041 13.2521 13.0778 13.2025 13.1398 13.14C13.2023 13.078 13.2519 13.0043 13.2857 12.9231C13.3196 12.8418 13.337 12.7547 13.337 12.6667C13.337 12.5787 13.3196 12.4915 13.2857 12.4103C13.2519 12.329 13.2023 12.2553 13.1398 12.1933L8.9398 8Z">
+						</path>
+					</svg>
+				</a>
+			</div>
+			<div class="offcanvas-body">
+				<div>
+					<a href="#profile" class="fw-bold py-2 d-inline-block font-body text-action-8">
+								企業情報
+					</a>
+				</div>
+				<div>
+					<a href="#platform" class="fw-bold py-2 d-inline-block font-body text-action-8">
+								プラットフォーム技術
+					</a>
+				</div>
+				<div>
+					<a href="#pipeline" class="fw-bold py-2 d-inline-block font-body text-action-8">
+								研究開発パイプライン
+					</a>
+				</div>
+				<div>
+					<a href="#service" class="fw-bold py-2 d-inline-block font-body text-action-8">
+								技術サービス
+					</a>
+				</div>
+				<div>
+					<a href="#contact" class="fw-bold py-2 d-inline-block font-body text-action-8">
+								お問い合わせ
+					</a>
+				</div>
+				<a href="#" class="btn btn-sm font-body btn-outline-action-8 fs-5 rounded-1 opacity-90 mt-8 mt-md-8">
+							English
+				</a>
+			</div>
+		</div>
+		<div class="d-none d-lg-block">
+			<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-xl-3 col-2">
+						<a data-bs-target="" href="#">
+							<img src="i/logo.svg" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="0" srcset="i/logo.svg 2x">						
+						</a>
+					</div>
+					<div class="text-end align-item-center col-xl-9 col-10">
+						<a href="#profile" class="text-dark-2 font-heading fw-6 mx-2 blacknavbar" data-aos="fade-down" data-aos-delay="150" data-bs-target="">
+									企業情報
+						</a>
+						<a href="#platform" class="text-dark-2 font-heading fw-6 mx-2 blacknavbar" data-aos="fade-down" data-aos-delay="250" data-bs-target="">
+									プラットフォーム技術
+						</a>
+						<a href="#pipeline" class="text-dark-2 font-heading fw-6 mx-2 blacknavbar" data-aos="fade-down" data-aos-delay="400">
+									研究開発パイプライン
+						</a>
+						<a href="#service" class="text-dark-2 font-heading fw-6 mx-2 blacknavbar" data-aos="fade-down" data-aos-delay="500" data-bs-target="">
+									技術サービス
+						</a>
+						<a href="#contact" class="text-dark-2 font-heading fw-6 mx-2 text-start blacknavbar" data-aos="fade-down" data-aos-delay="650" data-bs-target="">
+									お問い合わせ
+						</a>
+						<a href="#" class="btn btn-sm font-body btn-outline-dark-2 rounded-1 ms-3 fs-6 blacknavbar" data-aos="fade-down" data-aos-delay="750">
+									English
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- Header 2 -->
+		<header class="py-20 bg-size-cover text-start px-sm-16 px-md-0 px-8 bg-position-top-center" data-bg-src-2x="i/i12.jpg" data-bg-src="i/i12.jpg">
+			<div class="container text-start text-md-start my-xl-13">
+				<h2 class="text-light-1 text-xl-start mt-xl-6 font-heading text-lg-start text-start display-5 text-break mt-12 mb-6 lh-sm mb-xl-3 mb-md-3" data-aos="fade-down" data-aos-delay="0">
+							ブタの “揺り籠” でヒトの臓器を育てる
+				</h2>
+				<p class="fs-1 remove-br text-xl-start text-light-1 mb-xl-20 pb-xl-20 font-body opacity-90 fw-5 text-lg-start text-md-start mb-20 mb-md-20" data-aos="fade-down" data-aos-delay="250">
+							医療用ブタを利用した臓器移植･再生医療の実現を目指します
+				</p>
+				<p class="mb-6 remove-br text-xl-start font-body fs-3 text-light-1 mt-xl-20 pt-xl-20 mb-md-4 fw-6 opacity-90 text-lg-start mt-20" data-aos="fade-down" data-aos-delay="250">
+							医療用ブタとは :
+				</p>
+				<p class="font-body lh-base text-xl-start text-lg-start remove-br text-start opacity-100 text-action-8" data-aos="fade-down" data-aos-delay="250">
+							最先端の遺伝子改変技術や体細胞クローニング技術を駆使して開発される
+					<br>指定病原体フリー (DPF: Designated Pathogen Free) のブタ
+				</p>
+			</div>
+		</header>
+		<!-- Content 6 -->
+			<section class="py-lg-20 bg-bg-3 px-4 py-16">
+				<div class="container">
+					<div class="row justify-content-lg-between">
+						<div class="col-lg-3">
+							<h2 class="text-sm-start font-heading mb-xxl-1 mb-lg-1 mb-1 text-dark-2" data-aos="fade-down" data-aos-delay="0">
+										設立経緯
+							</h2>
+							<p class="font-body text-action-6 mb-8">
+										Background to the Foundation
+							</p>
+						</div>
+						<div class="col-lg-9">
+							<p class="mb-xl-6 font-body text-dark-1 mb-4" data-aos="fade-down" data-aos-delay="250">
+										株式会社ポル･メド･テックは、クローンブタ生産、遺伝子改変ブタによるヒト遺伝性疾患の再現、胚盤胞補完法による臓器再生、受精卵や組織の凍結保存などで国際的評価を受ける明治大学バイオリソース研究国際インスティテュート（所長：長嶋比呂志 農学部教授）の研究成果の社会実装を目的として2017年2月に設立されました。アンメットメディカルニーズへのソリューション提供を目的に、2021年には「ヒトへ移植可能な臓器・組織を次世代再生医療等製品として製造・販売し、世界の医療と人々の健康に貢献する」という新たなミッションを掲げました。この目的の早期実現のため、医療用に開発された高付加価値ブタを創出・利用し、製品を安価・安定に供給する革新的ビジネスを展開します。
+							</p>
+							<p class="mb-xl-6 font-body text-dark-1 mb-4" data-aos="fade-down" data-aos-delay="250">
+										今日の臓器移植医療において、日本では圧倒的なドナー不足の中、2010年の臓器移植法成立後も待機患者は年々増加しており、移植待機患者のうち実際に移植を受けられるのは約2%と深刻な需給ギャップが存在する状況です。世界に目を転じても、人口100万人あたりの臓器提供者数が日本に比べ40倍以上の米国でさえ、移植待機患者数に対してドナーが圧倒的に不足しており、臓器移植待機中に毎日20人が亡くなっているのが現状です。
+							</p>
+							<p class="mb-0 mb-xl-6 font-body remove-br-md text-dark-1" data-aos="fade-down" data-aos-delay="250">
+										このような状況下に、人工透析等の高額な対症療法が実施されていますが、患者の身体的負担のみならず、医療費の膨張が社会問題となっています。そこで当社は、従来の医療では提供し得なかったソリューションの提供を目指します。当社は、ブタを臓器移植や再生臓器の生産に活用するという新たなアプローチを、アンメットメディカルニーズの解決策として提唱します。再生医療等製品の製造販売業者として、ヒトに移植可能な臓器の提供を通じて、移植・再生医療に貢献することが当社の事業ビジョンです。
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- Application 4 -->
+				<section class="py-10 bg-action-3 pb-lg-10 pt-lg-20 px-4 pt-16">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-11 col-lg-8 col-xl-7 col-xxl-8">
+								<h2 class="mb-6 font-heading display-5 text-action-6" data-aos="fade-down" data-aos-delay="0">
+											アンメットメディカルニーズへの挑戦
+								</h2>
+								<p class="text-dark-1 mb-4" data-aos="fade-down" data-aos-delay="150">
+											糖尿病・腎疾患・肝疾患・肺疾患などは羅患者数が多い疾患であり臓器移植によって根本治療が可能な疾患ですが、移植向け臓器数が著しく少ない為、日本では移植医療需要は2%しか満たされていな深刻な状況です。
+								</p>
+								<p class="text-dark-1 mb-4" data-aos="fade-down" data-aos-delay="150">
+											世界でも、例えば臓器移植が比較的進んでいる米国でさえ、臓器が不足しており、移植待機中に毎日20人の方が亡くなっています。
+								</p>
+								<p class="mb-8 text-dark-1" data-aos="fade-down" data-aos-delay="150">
+											人工透析や高額な対症療法が実施されていますが、患者・家族への負担は大きくQOLが非常に悪くなっています。また、医療費の観点でも、膨大な支出となっています。例えば、日本では腎透析は2兆円でありこれは総医療費の5%を占めます。
+								</p>
+							</div>
+						</div>
+						<div class="row mb-15">
+							<div class="mb-8 col-sm-6 col-md-4 col-lg-3 mb-md-0 mb-sm-8" data-aos="fade-down" data-aos-delay="250">
+								<div class="col-12 d-flex align-items-end mb-4">
+									<h2 class="font-heading text-dark-1 remove-br display-4 me-1">
+												2
+									</h2>
+									<div class="text-dark-1 font-heading text-start fw-bold fs-1">
+												%
+									</div>
+								</div>
+								<p class="fs-4 mb-0 fw-6">
+											日本における
+									<br>
+移植医療の需要充足率
+								</p>
+							</div>
+							<div class="mb-8 col-sm-6 col-md-4 col-lg-3 mb-sm-8 mb-md-0" data-aos="fade-down" data-aos-delay="250">
+								<div class="col-12 d-flex align-items-end mb-4">
+									<h2 class="font-heading text-dark-1 remove-br display-4 me-1">
+										17
+									</h2>
+									<div class="text-dark-1 font-heading text-start fw-bold fs-1">
+										人/日
+									</div>
+								</div>
+								<p class="fs-4 mb-0 fw-6">
+									米国における
+									<br>移植待機中の平均死者数
+								</p>
+							</div>
+							<div class="mb-sm-0 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-down" data-aos-delay="250">
+								<div class="col-12 d-flex align-items-end mb-4">
+									<h2 class="font-heading text-dark-1 remove-br display-4 me-1">
+										4
+									</h2>
+									<div class="text-dark-1 font-heading text-start fw-bold fs-1">
+												%
+									</div>
+								</div>
+								<p class="fs-4 mb-0 fw-6">
+									日本の総医療費に占める
+									<br>
+腎透析費用の割合
+								</p>
+							</div>
+						</div>
+						<div class="row mb-15 align-items-end">
+							<div class="col-lg-6 col-sm-12 mb-lg-0 mb-12" data-aos="fade-down" data-aos-delay="250">
+								<div class="col-12 d-flex align-items-end mb-4">
+									<h5 class="text-capitalize font-body text-bg-2 me-2 fs-4">
+												国内臓器移植待機患者数と移植件数の比較
+									</h5>
+									<h5 class="me-1 text-capitalize font-body text-bg-2 fs-5">
+												(2019)
+									</h5>
+								</div>
+								<img src="i/chart10.svg" srcset="i/chart10.svg 2x" alt="" class="img-fluid">
+								<p class="mb-0 fs-6 fw-normal text-light-3">
+											出所：日本臓器移植ネットワーク
+								</p>
+							</div>
+							<div class="mb-8 mb-sm-0 col-lg-6 col-sm-12" data-aos="fade-down" data-aos-delay="250">
+								<div class="col-12 d-flex align-items-end mb-4">
+									<h5 class="text-capitalize font-body text-bg-2 me-2 fs-4">
+												Patients on the waiting list vs. Transplants Performed
+									</h5>
+									<h5 class="me-1 text-capitalize font-body text-bg-2 fs-5">
+												(2020)
+									</h5>
+								</div>
+								<img src="i/chart3.svg" srcset="i/chart3.svg 2x" alt="" class="img-fluid">
+								<p class="mb-0 fs-6 fw-normal text-light-3">
+											出所：米Organdonor.gov　
+								</p>
+							</div>
+							<div class="mb-sm-0 col-sm-12 mt-lg-16 mt-12" data-aos="fade-down" data-aos-delay="250">
+								<h3 class="font-heading text-action-7">
+											従来のアプローチとは異なる画期的なイノベーションが要請されています
+								</h3>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Feature 2 -->
+					<section class="py-10 text-center bg-action-6 pt-lg-20 pb-lg-16 px-4 pt-16">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col-md-9 col-lg-7 col-xl-6 col-xxl-5">
+									<h2 class="font-heading text-action-8 mb-1" data-aos="fade-down" data-aos-delay="0">
+												コア･コンピタンス
+									</h2>
+									<p class="opacity-60 text-action-8 mb-12" data-aos="fade-down" data-aos-delay="250">
+												Core Competence
+									</p>
+								</div>
+							</div>
+							<div class="row justify-content-center">
+								<div class="mb-8 mb-lg-0 col-sm-8 col-md-7 col-lg-4 d-flex" data-aos="fade-down" data-aos-delay="0">
+									<div class="w-100 p-8 p-md-16 p-lg-8 p-xl-12 border border-1 rounded-2 border-light-2 p-xxl-15">
+										<svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-action-8 mb-6 fill-action-6 fill-action-5">
+											<path d="M41.3332 113.667C38.2332 113.667 36.1665 111.6 36.1665 108.5V46.5C36.1665 43.4 38.2332 41.3333 41.3332 41.3333C44.4332 41.3333 46.4998 43.4 46.4998 46.5V108.5C46.4998 111.6 44.4332 113.667 41.3332 113.667Z">
+											</path>
+											<path opacity="0.3" d="M20.6667 77.5C17.5667 77.5 15.5 75.4333 15.5 72.3333V31C15.5 27.9 17.5667 25.8333 20.6667 25.8333C23.7667 25.8333 25.8333 27.9 25.8333 31V72.3333C25.8333 75.4333 23.7667 77.5 20.6667 77.5ZM67.1667 98.1667V15.5C67.1667 12.4 65.1 10.3333 62 10.3333C58.9 10.3333 56.8333 12.4 56.8333 15.5V98.1667C56.8333 101.267 58.9 103.333 62 103.333C65.1 103.333 67.1667 101.267 67.1667 98.1667ZM87.8333 82.6667V25.8333C87.8333 22.7333 85.7667 20.6667 82.6667 20.6667C79.5667 20.6667 77.5 22.7333 77.5 25.8333V82.6667C77.5 85.7667 79.5667 87.8333 82.6667 87.8333C85.7667 87.8333 87.8333 85.7667 87.8333 82.6667ZM108.5 93V51.6667C108.5 48.5667 106.433 46.5 103.333 46.5C100.233 46.5 98.1667 48.5667 98.1667 51.6667V93C98.1667 96.1 100.233 98.1667 103.333 98.1667C106.433 98.1667 108.5 96.1 108.5 93Z">
+											</path>
+										</svg>
+										<h5 class="font-heading text-action-8 lh-base fs-4">
+													世界最高水準の
+											<br>ブタ遺伝子改変・
+											<br>発生工学技術
+										</h5>
+									</div>
+								</div>
+								<div class="mb-8 mb-lg-0 col-sm-8 col-md-7 col-lg-4 d-flex" data-aos="fade-down" data-aos-delay="0">
+									<div class="w-100 p-8 p-md-16 p-lg-8 p-xl-12 border border-1 rounded-2 border-light-2 p-xxl-15">
+										<svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-action-8 fill-action-6 fill-action-5 mb-6">
+											<path opacity="0.3" d="M44.9503 31C41.8503 29.45 38.2335 27.9001 35.1335 26.3501C40.3002 20.6667 45.9836 15.5 52.1836 11.3667C55.2836 10.85 58.9003 10.3333 62.0003 10.3333C65.6169 10.3333 68.7169 10.85 71.8169 11.3667C62.0003 16.5333 52.7003 23.25 44.9503 31ZM62.0003 43.4C71.8169 34.1 83.7003 27.3834 96.6169 23.7667C93.5169 20.6667 89.9003 18.6 86.2836 16.5333C74.4003 21.1833 63.0336 27.9001 54.2503 36.6834C56.8336 38.7501 59.4169 40.8166 62.0003 43.4Z">
+											</path>
+											<path d="M36.1666 103.333C36.1666 104.367 36.1666 105.4 36.1666 106.433C32.0333 103.85 28.4165 101.267 25.3165 98.1667C23.7665 93 20.6666 88.8667 16.5333 85.7667C14.4666 81.6333 12.9165 77.5 11.8832 72.85C25.8332 75.95 36.1666 88.35 36.1666 103.333ZM54.7666 51.1497C44.95 41.8497 33.0665 35.6498 19.6332 32.5498C17.5665 35.6498 15.4999 38.7497 14.4665 42.3664C27.8999 44.4331 39.7833 50.6331 49.0833 59.9333C50.6333 56.3167 52.6999 53.7328 54.7666 51.1497ZM11.3666 52.1833C10.85 55.2833 10.3333 58.9 10.3333 62C10.3333 62 10.3333 62 10.3333 62.5167C22.2166 64.0667 33.0666 70.7833 39.2666 80.6C40.3 76.4667 41.8499 72.8495 43.3999 69.2328C35.6499 59.9328 24.2833 53.7333 11.3666 52.1833ZM56.8333 103.333C56.8333 72.3333 79.5666 46.4998 109.533 41.8498C107.983 38.2331 106.433 35.1331 104.367 32.0331C71.2999 38.7497 46.4999 67.6828 46.4999 102.816C46.4999 105.399 46.5 108.5 47.0166 111.083C50.6333 112.117 54.2499 112.633 57.8666 113.149C57.3499 110.049 56.8333 106.95 56.8333 103.333ZM98.6833 98.1667C100.233 93 103.333 88.8667 107.467 85.7667C109.533 81.6333 111.083 77.5 112.117 72.85C98.1666 75.95 87.3166 88.35 87.3166 103.333C87.3166 104.367 87.3166 105.4 87.3166 106.433C91.9666 104.367 95.5833 101.267 98.6833 98.1667ZM77.4999 103.333C77.4999 82.15 93.5166 65.1 113.667 62.5167C113.667 62.5167 113.667 62.5167 113.667 62C113.667 58.3833 113.15 55.2833 112.633 52.1833C86.7999 55.2833 67.1666 76.9833 67.1666 103.333C67.1666 106.95 67.6833 110.049 68.1999 113.149C71.8166 112.633 74.9166 112.117 78.5333 111.083C78.0166 108.5 77.4999 105.917 77.4999 103.333Z">
+											</path>
+										</svg>
+										<h5 class="font-heading text-action-8 lh-base fs-4">
+													安全･高品質でヒト移植可能な
+											<br>臓器･組織を再生医療等製品として
+											<br>大量･安定的に低コスト製造
+										</h5>
+									</div>
+								</div>
+								<div class="mb-8 mb-lg-0 col-sm-8 col-md-7 col-lg-4 d-flex" data-aos="fade-down" data-aos-delay="0">
+									<div class="w-100 p-8 p-md-16 p-lg-8 p-xl-12 border border-1 rounded-2 border-light-2 p-xxl-15">
+										<svg width="124" height="124" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-action-8 mb-6 fill-action-6 fill-action-5">
+											<path d="M62.2296 92.7127V62.746L88.0629 77.7294C96.3296 82.3794 98.9134 93.2294 94.2634 101.496C89.6134 109.763 78.7634 112.346 70.4967 107.696C65.3301 104.596 62.2296 98.9127 62.2296 92.7127ZM36.3965 77.7294L62.2296 62.746L36.3965 47.763C28.1298 43.113 17.7964 45.6963 12.6298 53.9627C7.97978 62.2294 10.5632 72.5627 18.8298 77.7294C24.5132 80.8294 31.2298 80.8294 36.3965 77.7294ZM62.2296 32.7796V62.746L88.0629 47.763C96.3296 43.113 98.9134 32.2629 94.2634 23.9963C89.6134 15.7296 78.7634 13.1463 70.4967 17.7963C65.3301 20.8963 62.2296 26.5796 62.2296 32.7796Z">
+											</path>
+											<path opacity="0.3" d="M36.3957 47.763C31.229 44.663 27.6123 38.9796 27.6123 32.7796C27.6123 23.4796 35.3624 15.7296 44.6624 15.7296C53.9622 15.7296 61.7122 23.4796 61.7122 32.7796V62.7461L36.3957 47.763ZM88.0622 77.7294C93.2289 80.8294 99.9455 80.8294 105.112 77.7294C113.379 73.0794 115.962 62.2294 111.312 53.9627C106.662 45.6963 95.8122 43.113 87.5455 47.763L61.7122 62.7461L88.0622 77.7294ZM36.3957 77.7294C31.229 80.8294 27.6123 86.5128 27.6123 92.7128C27.6123 102.013 35.3624 109.763 44.6624 109.763C53.9622 109.763 61.7122 102.013 61.7122 92.7128V62.7461L36.3957 77.7294Z">
+											</path>
+										</svg>
+										<h5 class="font-heading text-action-8 lh-base fs-4">
+													ヒトiPS細胞等
+											<br>を用いたヒト化
+											<br>臓器作出技術
+										</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- Feature 12 -->
+						<section class="bg-action-6 pt-lg-0 px-4 pb-16 pb-lg-20 pt-0">
+							<div class="container">
+								<div class="row">
+									<div class="col-xl-5 col-xxl-6 mb-lg-0 mb-4 mx-8 mx-lg-0 col-10 col-sm-11 col-md-11 col-lg-5">
+										<h5 class="font-heading text-action-8 mt-0 fw-6 opacity-80 mb-7" data-aos="fade-down" data-aos-delay="250">
+													コア事業
+										</h5>
+										<h3 class="my-6 font-heading text-action-8 fw-6 lh-base" data-aos="fade-down" data-aos-delay="250" placeholder="">
+													医療用ブタによるヒト臓器再生に取り組み､ヒト臓器ドナーに替わる臓器移植､即ち「ヒト化臓器等移植」の実現を目指すパイオニア企業として再生医療等製品を製造･販売し､日本･海外へ事業展開する
+										</h3>
+									</div>
+									<div class="d-none d-md-block col-md-1 col-lg-2">
+									</div>
+									<div class="col-md-12 mb-8 mb-lg-0 col-sm-12 col-12 col-xxl-4 col-lg-5">
+										<div class="mb-8" data-aos="fade-down" data-aos-delay="0">
+											<div class="ps-9">
+												<h5 class="text-light-1 font-heading fw-6 opacity-80">
+															取り組み意義
+												</h5>
+											</div>
+										</div>
+										<div class="mb-6" data-aos="fade-down" data-aos-delay="0">
+											<h4 class="position-absolute text-action-8 opacity-40 font-heading fs-2">
+														01
+											</h4>
+											<div class="ps-9">
+												<h4 class="text-light-1 font-heading fs-2">
+															圧倒的に不足する臓器ニーズへの対応
+												</h4>
+											</div>
+										</div>
+										<div class="mb-6" data-aos="fade-down" data-aos-delay="250">
+											<h4 class="position-absolute font-heading text-action-8 opacity-40 fs-2">
+02
+											</h4>
+											<div class="ps-9">
+												<h4 class="text-light-1 font-heading fs-2">
+															患者･家族のQOL向上
+												</h4>
+											</div>
+										</div>
+										<div data-aos="fade-down" data-aos-delay="500">
+											<h4 class="position-absolute font-heading text-action-8 opacity-40 fs-2">
+03
+											</h4>
+											<div class="ps-9">
+												<h4 class="text-light-1 font-heading fs-2">
+															膨大な医療費の削減への貢献
+												</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- Feature 8 -->
+							<section class="py-lg-20 bg-action-3 px-4 py-16 pt-16 pt-lg-20 pb-lg-20 pb-4" id="platform">
+								<div class="container">
+									<div class="row align-items-md-center justify-content-between">
+										<div class="mb-8 mb-md-0 col-lg-6 col-xl-5 col-xxl-5 col-12 text-start">
+											<h5 class="text-center text-md-start font-heading text-action-6 mb-1" data-aos="fade-down" data-aos-delay="250">
+														プラットフォーム技術
+											</h5>
+											<h5 class="mb-6 text-md-start font-heading text-action-6 display-1 fw-light text-center" data-aos="fade-down" data-aos-delay="400">
+														#1
+											</h5>
+											<h1 class="mb-6 text-center text-md-start font-heading text-dark-2 lh-sm" data-aos="fade-down" data-aos-delay="500">
+														体細胞クローニング技術による 
+												<span class="text-nowrap">
+遺伝子改変ブタの創出
+												</span>
+											</h1>
+											<p class="fs-4 mb-0 text-dark-2 text-center fw-5 text-md-start text-lg-start text-xl-start font-body" data-aos="fade-down" data-aos-delay="650">
+														遺伝子操作した細胞から、無性生殖的な体細胞クローニングによって直接遺伝改変個体を生産する技術は、ポル･メド･テックのコアテクノロジーの一つです
+											</p>
+										</div>
+										<div class="col-xl-6 col-12 col-lg-5 mt-8 mt-lg-0">
+											<img src="i/figure10.svg" srcset="i/figure10.svg 2x" alt="" class="img-fluid w-100" data-aos="fade-down" data-aos-delay="750">			
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- Content 6 -->
+								<section class="bg-action-3 pt-lg-0 px-4 pt-8 pb-lg-20 pb-12" id="dpf">
+									<div class="container">
+										<div class="justify-content-lg-between border-bottom border-action-6 border-1 opacity-40 row g-0 mb-16">
+										</div>
+										<div class="justify-content-lg-between align-items-center row g-0">
+											<div class="col-lg-5 col-12 text-center text-md-start">
+												<h5 class="mb-4 font-heading text-action-6 mb-lg-1" data-aos="fade-down" data-aos-delay="0">
+															プラットフォーム技術
+												</h5>
+												<h2 class="font-heading display-1 fw-light text-action-6 mb-4 mb-lg-6" data-aos="fade-down" data-aos-delay="0">
+															#2
+												</h2>
+												<h1 class="mb-4 mb-lg-0 font-heading text-dark-2 lh-sm" data-aos="fade-down" data-aos-delay="0">
+															医療用指定病原体フリー
+													<br>(DPF: Designated Pathogen Free) ブタ
+												</h1>
+											</div>
+											<div class="col-lg-6 col-12 mt-8 mt-lg-0">
+												<div class="border border-1 rounded-2 p-12 col-lg-12 border-action-6">
+													<p class="mb-0 font-body fw-6" data-aos="fade-down" data-aos-delay="250">
+																厚生労働省異種移植ガイドラインに指定されたXX種の病原体(ウィルス･細菌･真菌･原虫)を持たないブタを低コストに生産できる製法を開発しました
+													</p>
+												</div>
+												<div class="border border-action-6 border-1 rounded-2 p-12 col-lg-12 mt-4">
+													<p class="mb-0 font-body fw-6" data-aos="fade-down" data-aos-delay="250">
+																AMEDの令和2年度 「CiCLE：第5回公募」におけるViCLEイノベーション創出環境整備タイプに当社を代表機関とする課題「医療用ブタ製造を目指した基盤整備」として採択済みであり、設備建設、製法の産業応用化に向け取り組みを進めています
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<!-- Feature 8 -->
+									<section class="py-10 pb-20 bg-action-3 px-4 pt-0" id="organ">
+										<div class="container">
+											<div class="row align-items-md-center justify-content-between g-0 border-bottom border-action-6 border-1 opacity-40 mb-16">
+											</div>
+											<div class="row align-items-md-center justify-content-between">
+												<div class="mb-8 mb-md-0 col-lg-6 col-xl-5 col-xxl-5 col-12">
+													<h5 class="text-center text-md-start mb-1 text-action-6" data-aos="fade-down" data-aos-delay="250">
+																プラットフォーム技術
+													</h5>
+													<h2 class="text-center text-md-start font-heading display-1 fw-light text-action-6 mb-6" data-aos="fade-down" data-aos-delay="250">
+																#3
+													</h2>
+													<h1 class="mb-6 text-center text-md-start font-heading text-dark-2 lh-sm" data-aos="fade-down" data-aos-delay="250">
+																ヒトiPS細胞等用いた
+														<br>ヒト化臓器作出技術
+													</h1>
+													<p class="text-center text-md-start fs-4 font-body mb-3 fw-5" data-aos="fade-down" data-aos-delay="500">
+																ブタ胎仔臓器原基にヒト幹細胞･前駆細胞を移植し、ヒト細胞で構築された臓器を作出
+													</p>
+													<p class="text-center text-md-start mb-0 font-body fs-4 text-dark-2 fw-5" data-aos="fade-down" data-aos-delay="500">
+																ヒトへの臓器移植後、ヒト･ブタのキメラ状態である臓器がヒト体内で発達するのと並行して、ブタ由来細胞の細胞死誘導や細胞増殖の制御により徐々に消失させることで、最終的にヒト化した臓器となる
+													</p>
+												</div>
+												<div class="col-xl-6 col-lg-5 col-12 mt-8 mt-lg-0">
+													<img src="i/figure9.svg" srcset="i/figure9.svg 2x" alt="" class="img-fluid w-100" data-aos="fade-down" data-aos-delay="0">			
+												</div>
+											</div>
+										</div>
+									</section>
+									<!-- Testimonial 6 -->
+										<section class="py-lg-20 bg-dark-2 px-4 py-16">
+											<div class="container">
+												<div class="row justify-content-center text-center text-md-center text-lg-center text-xl-center">
+													<div class="mb-1 col-12">
+														<p class="text-light-2 mb-2" data-aos="fade-down" data-aos-delay="150">
+																	Publication
+														</p>
+													</div>
+													<div class="mb-4 col-12">
+														<h2 class="mb-6 font-heading text-action-8" data-aos="fade-down" data-aos-delay="0">
+																	遺伝子改変ブタの開発実績
+														</h2>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+														<div class="border rounded-2 h-100 p-6 border-bg-2">
+															<h5 class="font-heading text-action-8 mb-4 fw-6">
+																		糖尿病モデルブタ
+															</h5>
+															<p class="text-light-2 font-body fs-6 mb-4">
+																		Umeyama K, Watanabe M, Saito H, Kurome M, Tohi S, Matsunari H, Miki H, Nagashima H: Dominant t-negative mutant hepatocyte nuclear factor 1alpha induces diabetes in transgenic-cloned pigs. Transgenic Research, 18(5): 697-706, 2009.
+															</p>
+															<p class="text-light-2 font-body fs-6 mb-0">
+																		Umeyama K, Nakajima M, Yokoo T, Nagaya M, Nagashima H: Diabetic phenotype of transgenic pigs introduced by dominant-negative mutant hepatocyte nuclear factor 1α. Journal of Diabetes and its Complications, 31(5):796-803, 2017.
+															</p>
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+														<div class="border rounded-2 h-100 p-6 border-bg-2">
+															<h5 class="font-heading text-action-8 mb-4 fw-6">
+																		免疫不全ブタ
+															</h5>
+															<p class="text-light-2 font-body fs-6 mb-0">
+																		Watanabe M, Nakano K, Matsunari H, Matsuda T, Maehara M, Kanai T, Kobayashi M, Matsumura Y, Sakai R, Kuramoto M, Hayashida G, Asano Y, Takayanagi S, Arai Y, Umeyama K, Nagaya M, Hanazono Y, Nagashima H: Generation of interleukin-2 receptor gamma gene knockout pigs from somatic cells genetically modified by zinc finger nuclease-encoding mRNA. PLOS ONE 8:e76478, 2013.
+															</p>
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+														<div class="border rounded-2 h-100 p-6 border-bg-2">
+															<h5 class="font-heading text-action-8 mb-4 fw-6">
+																		膵臓形成が阻害されたブタ
+															</h5>
+															<p class="text-light-2 font-body fs-6 mb-0">
+																		Matsunari H, Nagashima H, Watanabe M, Umeyama K, Nakano K, Nagaya M, Kobayashi T, Yamaguchi T, Sumazaki R, Herzenberg L.A., Nakauchi H. Blastocyst complementation generates exogenic pancreas in vivo in apancreatic cloned pigs. Proc Natl Acad Sci USA, 110:4557-4562, 2013.
+															</p>
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+														<div class="border rounded-2 h-100 p-6 border-bg-2">
+															<h5 class="font-heading text-action-8 mb-4 fw-6">
+																		腎臓形成が阻害されたブタ
+															</h5>
+															<p class="text-light-2 font-body fs-6 mb-0">
+																		Matsunari H, Watanabe M, Hasegawa K, Uchikura A, Nakano K, Umeyama K, Masaki H, Hamanaka S, Yamaguchi T, Nagaya M, Nishinakamura R, Nakauchi H, Nagashima H: Compensation of disabled organogeneses in genetically modified pig fetuses by blastocyst complementation. Stem Cell Reports:14:21-33, 2020.
+															</p>
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+														<div class="border rounded-2 h-100 p-6 border-bg-2">
+															<h5 class="font-heading text-action-8 mb-4 fw-6">
+																		肝臓形成が阻害されたブタ
+															</h5>
+															<p class="text-light-2 font-body fs-6 mb-0">
+																		Matsunari H, Watanabe M, Hasegawa K, Uchikura A, Nakano K, Umeyama K, Masaki H, Hamanaka S, Yamaguchi T, Nagaya M, Nishinakamura R, Nakauchi H, Nagashima H: Compensation of disabled organogeneses in genetically modified pig fetuses by blastocyst complementation. Stem Cell Reports:14:21-33, 2020.
+															</p>
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+														<div class="border rounded-2 h-100 p-6 border-bg-2">
+															<h5 class="font-heading text-action-8 mb-4 fw-6">
+																		β細胞を欠損する膵臓を持った重症糖尿病ブタ
+															</h5>
+															<p class="text-light-2 font-body fs-6 mb-0">
+																		Nagaya M, Hasegawa K, Watanabe M, Nakano K, Okamoto K, Yamada T, Uchikura A, Osafune K, Yokota H, Nagaoka T, Matsunari H, Umeyama K, Kobayashi E, Nakauchi H, Nagashima H: Genetically engineered pigs manifesting pancreatic agenesis with severe diabetes. BMJ Open Diabetes Research &amp; Care, 8:e001792, 2020.
+															</p>
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+														<div class="border rounded-2 h-100 p-6 border-bg-2">
+															<h5 class="font-heading text-action-8 mb-4 fw-6">
+																		マルファン症候群モデルブタ
+															</h5>
+															<p class="text-light-2 font-body fs-6 mb-0">
+																		Umeyama K, Watanabe K, Watanabe M, Horiuchi K, Nakano K, Kitashiro M, Matsunari H, Kimura T, Arima Y, Sampetrean O, Nagaya M, Saito M, Saya H, Kosaki K, Nagashima H, Matsumoto M: Generation of heterozygous fibrillin-1 mutant cloned pigs from genome-edited foetal fibroblasts. Scientific Reports, 6:24413, 2016.
+															</p>
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+														<div class="border rounded-2 h-100 p-6 border-bg-2">
+															<h5 class="font-heading text-action-8 mb-4 fw-6">
+																		拡張型心筋症候モデルブタ
+															</h5>
+															<p class="text-light-2 font-body fs-6 mb-0">
+																		Matsunari H, Honda M, Watanabe M, Fukushima S, Suzuki K, Miyagawa S, Nakano K, Umeyama K, Uchikura A, Okamoto K, Nagaya M, Toyooka T, Sawa Y, Nagashima H: Pigs with δ-sarcoglycan deficiency exhibit traits of genetic cardiomyopathy. Laboratory Investigation, 100:887-899, 2020.
+															</p>
+														</div>
+													</div>
+													<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+														<div class="border rounded-2 h-100 p-6 border-bg-2">
+															<h5 class="font-heading text-action-8 mb-4 fw-6">
+																		疾患モデルブタの致死性を救済する方法
+															</h5>
+															<p class="text-light-2 font-body fs-6 mb-0">
+																		Matsunari H, Watanabe M, Nakano K, Enosawa S, Umeyama K, Uchikura A, Yashima S, Fukuda T, Klymiuk N, Kurome M, Kessler B, Wuensch A, Zakhartchenko V, Wolf E, Hanazono Y, Nagaya M, Umezawa A, Nakauchi H, Nagashima H: Modeling lethal X-linked genetic disorders in pigs with ensured fertility. Proc of Natl Acad Sci USA, 115:708-713, 2018.
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+										<!-- Pricing 9 -->
+											<section class="bg-bg-1 pt-20 pb-12 px-4 pb-lg-4" id="pipeline">
+												<div class="container">
+													<div class="row justify-content-between mb-10 mb-lg-15">
+														<div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 col-xxl-4">
+															<h2 class="font-heading text-action-4 mb-1" data-aos="fade-down" data-aos-delay="0">
+														研究開発パイプライン
+															</h2>
+															<p class="font-body text-action-6">
+																				R&amp;D Pipelines
+															</p>
+														</div>
+														<div class="col-12 col-xxl-8">
+															<div id="custom-id-uhwfot2z" class="carousel slide carousel-fade" data-bs-interval="false" data-bs-touch="false" data-aos="fade-down" data-aos-delay="400">
+																<div class="carousel-inner w-auto">
+																	<div class="carousel-item active bg-bg-1">
+																		<div data-aos="fade-down" data-aos-delay="250">
+																			<div class="overflow-auto">
+																				<div class="container row g-0" style="min-width:52.75rem;">
+																					<div class="row justify-content-between mb-6 pt-1">
+																						<div style="width:7.75rem;" class="row g-0">
+																							<h5 class="text-light-2 font-heading fw-6 fs-4 text-start">
+																								パイプライン
+																							</h5>
+																						</div>
+																						<div style="width:7.75rem;">
+																							<h5 class="text-light-2 font-heading fw-6 fs-4 text-start">
+																								対象
+																							</h5>
+																						</div>
+																						<div style="width:8.75rem;">
+																							<h5 class="text-center text-light-2 font-heading fw-6 fs-4">
+																								研究
+																							</h5>
+																						</div>
+																						<div style="width:8.75rem;">
+																							<h5 class="text-center font-heading text-light-2 fw-6 fs-4">
+																												前臨床試験
+																							</h5>
+																						</div>
+																						<div style="width:8.75rem;">
+																							<h5 class="text-center font-heading text-light-2 fw-6 fs-4">
+																												臨床試験
+																							</h5>
+																						</div>
+																						<div style="width:8.75rem;">
+																							<h5 class="text-center font-heading text-light-2 fs-4 fw-6">
+																												ステータス
+																							</h5>
+																						</div>
+																					</div>
+																					<div class="border-bottom border-light-2 opacity-40 row mb-8">
+																					</div>
+																					<div class="align-items-center mb-6 row justify-content-between">
+																						<div style="width:7.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-3">
+																												膵島
+																							</p>
+																							<p class="mb-0 font-heading text-action-8 fs-6 fw-normal">
+																							</p>
+																						</div>
+																						<div style="width:6.75rem;" class="g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-4 fw-6" placeholder="">
+																								糖尿病
+																							</p>
+																						</div>
+																						<div class="text-center justify-content-start row g-0 col-6">
+																							<a class="btn btn-action-1 text-start d-xxl-flex btn-sm" data-bs-target="" style="width: 65% !important; border-radius: 0 1rem 1rem 0rem;">
+																							</a>
+																						</div>
+																						<div class="text-center" style="width:8.75rem;">
+																							<p class="font-body text-action-8 fs-4 mb-0">
+																												臨床試験準備中
+																							</p>
+																						</div>
+																					</div>
+																					<div class="row justify-content-between align-items-center mb-6">
+																						<div style="width:7.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-3">
+																												膵島
+																							</p>
+																							<p class="mb-0 font-heading text-action-8 fs-6 fw-normal">
+																								遺伝子改変
+																							</p>
+																						</div>
+																						<div style="width:6.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-4 fw-6" placeholder="">
+																								糖尿病
+																							</p>
+																						</div>
+																						<div class="text-center justify-content-start row g-0 col-6">
+																							<a class="btn btn-action-1 text-start d-xxl-flex btn-sm" data-bs-target="" style="width: 18% !important; border-radius: 0 1rem 1rem 0rem;">
+																							</a>
+																						</div>
+																						<div class="text-center" style="width:8.75rem;">
+																							<p class="font-body text-action-8 fs-4 mb-0">
+																								研究
+																							</p>
+																						</div>
+																					</div>
+																					<div class="row justify-content-between align-items-center mb-6">
+																						<div style="width:7.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-3">
+																								膵島
+																							</p>
+																							<p class="mb-0 font-heading text-action-8 fs-6 fw-normal">
+																								遺伝子改変
+																							</p>
+																						</div>
+																						<div style="width:6.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-4 fw-6">
+																								糖尿病
+																							</p>
+																						</div>
+																						<div class="text-center justify-content-start row g-0 col-6">
+																							<a class="btn btn-action-1 text-start d-xxl-flex btn-sm" data-bs-target="" style="width: 15% !important; border-radius: 0 1rem 1rem 0rem;">
+																							</a>
+																						</div>
+																						<div class="text-center" style="width:8.75rem;">
+																							<p class="font-body text-action-8 fs-4 mb-0">
+																								研究
+																							</p>
+																						</div>
+																					</div>
+																					<div class="row justify-content-between align-items-center mb-6">
+																						<div style="width:7.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-3" placeholder="">
+																								腎臓
+																							</p>
+																							<p class="mb-0 font-heading text-action-8 fs-6 fw-normal" placeholder="">
+																								遺伝子改変ヒト化
+																							</p>
+																						</div>
+																						<div style="width:6.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-4 fw-6" placeholder="">
+																								腎不全
+																							</p>
+																						</div>
+																						<div class="text-center justify-content-start row g-0 col-6">
+																							<a class="btn btn-action-1 text-start d-xxl-flex btn-sm" data-bs-target="" style="width: 25% !important; border-radius: 0 1rem 1rem 0rem;">
+																							</a>
+																						</div>
+																						<div class="text-center" style="width:8.75rem;">
+																							<p class="font-body text-action-8 fs-4 mb-0">
+																												共同研究
+																							</p>
+																						</div>
+																					</div>
+																					<div class="row justify-content-between align-items-center mb-6">
+																						<div style="width:7.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-3" placeholder="">
+																								腎臓
+																							</p>
+																							<p class="mb-0 font-heading text-action-8 fs-6 fw-normal" placeholder="">
+																								遺伝子改変
+																							</p>
+																						</div>
+																						<div style="width:6.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-4 fw-6" placeholder="">
+																								腎不全
+																							</p>
+																						</div>
+																						<div class="text-center justify-content-start row g-0 col-6">
+																							<a class="btn btn-action-1 text-start d-xxl-flex btn-sm" data-bs-target="" style="width: 10% !important; border-radius: 0 1rem 1rem 0rem;">
+																							</a>
+																						</div>
+																						<div class="text-center" style="width:8.75rem;">
+																							<p class="font-body text-action-8 fs-4 mb-0">
+																								研究
+																							</p>
+																						</div>
+																					</div>
+																					<div class="row justify-content-between align-items-center mb-6">
+																						<div style="width:7.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-3" placeholder="">
+																								肺､肝臓等
+																							</p>
+																							<p class="mb-0 font-heading text-action-8 fs-6 fw-normal" placeholder="">
+																								遺伝子改変
+																							</p>
+																						</div>
+																						<div style="width:6.75rem;" class="row g-0">
+																							<p class="mb-0 font-heading text-action-8 fs-4 fw-6" placeholder="">
+																								肺､肝疾患等
+																							</p>
+																						</div>
+																						<div class="text-center justify-content-start row g-0 col-6">
+																							<a class="btn btn-action-1 text-start d-xxl-flex btn-sm" data-bs-target="" style="width: 8% !important; border-radius: 0 1rem 1rem 0rem;">
+																							</a>
+																						</div>
+																						<div class="text-center" style="width:8.75rem;">
+																							<p class="font-body text-action-8 fs-4 mb-0">
+																								研究
+																							</p>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>
+											<!-- Feature 15 -->
+												<section class="py-lg-20 text-center text-lg-start bg-action-3 pb-lg-0 px-4 py-16" id="xeno">
+													<div class="container">
+														<div class="row justify-content-between align-items-md-center">
+															<div class="text-md-start text-lg-start text-xl-start text-center col-md-7 col-lg-6 col-sm-12">
+																<h5 class="font-heading mb-4 text-action-6" data-aos="fade-down" data-aos-delay="250">
+															研究開発パイプライン
+																</h5>
+																<div class="border-bottom border-action-2 border-1 my-4 opacity-60">
+																</div>
+																<h3 class="mb-12 display-6 mt-md-8 text-action-6 font-heading" data-aos="fade-down" data-aos-delay="250">
+													異種膵島移植事業
+																</h3>
+																<div class="mb-12" data-aos="fade-down" data-aos-delay="400">
+																	<h4 class="mb-4 font-heading text-dark-2">
+												第一世代異種膵島移植
+																	</h4>
+																	<p class="mb-0 font-body fs-4 text-bg-2">
+												医療用DPFブタの膵島の移植によるインスリン依存型糖尿病患者様の重症無自覚性低血糖症の解消を目指します。免疫隔離アルギン酸マイクロカプセルと皮下移植用デバイスの併用により、外来診療による施術と免疫抑制剤が不要な治療を実現します
+																	</p>
+																</div>
+																<div class="mb-12" data-aos="fade-down" data-aos-delay="400">
+																	<h4 class="mb-4 font-heading text-dark-2">
+												次世代型異種膵島移植
+																	</h4>
+																	<p class="mb-0 font-body fs-4 text-bg-2">
+												インスリン分泌能を増強した医療用DPFブタの膵島を用い、インスリン依存型糖尿病患者様のインスリン投与療法からの解放を目指します
+																	</p>
+																</div>
+															</div>
+															<div class="mb-8 col-md-5 mb-lg-8 col-sm-12 me-lg-12">
+																<img src="i/figure5.svg" srcset="i/figure5.svg 2x" alt="" class="img-fluid w-100 mt-lg-8" data-aos="fade-down" data-aos-delay="0">
+															</div>
+														</div>
+													</div>
+												</section>
+												<!-- Feature 16 -->
+													<section class="py-10 text-center text-lg-start bg-action-3 pt-lg-0 pb-8 px-4" id="kidney">
+														<div class="container">
+															<div class="align-items-md-center justify-content-between flex-column-reverse flex-lg-row row">
+																<div class="mb-8 mb-lg-0 col-sm-12 col-md-5">
+																	<img src="i/figure8.svg" srcset="i/figure8.svg 2x" alt="" class="img-fluid w-100" data-aos="fade-down" data-aos-delay="0">
+																</div>
+																<div class="col-xxl-6 text-center col-sm-12 col-lg-6 col-md-6 text-md-start">
+																	<h5 class="font-heading mb-4 text-action-6" data-aos="fade-down" data-aos-delay="250">
+												研究開発パイプライン
+																	</h5>
+																	<div class="row border-bottom border-action-2 border-1 g-0 opacity-60 mb-4">
+																	</div>
+																	<h2 class="display-6 mb-12 font-heading text-action-6 mt-md-8" data-aos="fade-down" data-aos-delay="250">
+														ヒト化腎臓移植事業
+																	</h2>
+																	<div class="mb-8 mb-lg-0" data-aos="fade-down" data-aos-delay="400">
+																		<p class="mb-0 fs-4 text-action-7">
+															末期腎不全患者様の腎移植による救済を目指し、遺伝子改変した医療用DPFブタ腎臓とiPS細胞由来ヒト腎臓細胞とを組み合わせたヒト化ハイブリッド腎臓を開発します
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+													<!-- Feature 8 -->
+														<section class="bg-action-3 py-10 py-lg-20 pt-lg-4 px-4">
+															<div class="container">
+																<div class="row align-items-md-center justify-content-between">
+																	<div class="mb-md-0 col-md-7 col-lg-6 col-xxl-6 text-center text-lg-start text-md-start col-xl-6">
+																		<h5 class="text-center text-md-start font-heading mb-4 text-action-6" data-aos="fade-down" data-aos-delay="250">
+															次世代のパイプライン候補
+																		</h5>
+																		<div class="my-4 border-bottom border-action-2 border-1 opacity-60">
+																		</div>
+																		<h5 class="text-center text-md-start font-heading display-6 mb-12 mt-8 text-action-6" data-aos="fade-down" data-aos-delay="250">
+															異種腎移植事業
+																		</h5>
+																		<p class="fs-2 text-center text-md-start mb-0" data-aos="fade-down" data-aos-delay="500">
+																		</p>
+																		<p class="fs-4 text-action-7 text-lg-start" data-aos="fade-down" data-aos-delay="250">
+																					2021年10月 遺伝子改変ブタの腎臓をヒトに移植する試みが、米国ニューヨーク大学で初めて行われました。遺伝子改変ブタ腎臓の利用は、待機患者数の多い腎移植の現状を打破するための有望な方策であると期待されます。ポル･メド･テックが保有するブタの遺伝子改変技術と医療用ブタの生産システムを用いて、移植用ブタ腎臓生産の事業化を進める計画です
+																		</p>
+																		<a href="https://www.bbc.com/japanese/59005374" class="btn btn-action-5 text-light-1 my-4 font-body fw-6 px-6 fs-5 text-md-start text-center text-lg-start text-xl-start" target="_blank" data-aos="fade-down" data-aos-delay="250">
+															BBC News
+																		</a>
+																	</div>
+																	<div class="col-xl-5 me-lg-12 col-sm-12 col-md-5">
+																		<img src="i/figure7.svg" srcset="i/figure7.svg 2x" alt="" class="img-fluid w-100" data-aos="fade-down" data-aos-delay="0">			
+																	</div>
+																</div>
+															</div>
+														</section>
+														<!-- Testimonial 6 -->
+															<section class="py-lg-20 bg-dark-3 px-4 py-16" id="service">
+																<div class="container">
+																	<div class="row align-items-center justify-content-between">
+																		<div class="col-lg-5 col-xl-5 mb-8 mb-lg-0 col-12">
+																			<h5 class="text-light-1 font-heading opacity-80 mb-4" data-aos="fade-down" data-aos-delay="0">
+																						技術サービス事業
+																			</h5>
+																			<h3 class="text-light-1 font-heading display-6" data-aos="fade-down" data-aos-delay="0">
+																						凍結保存技術支援
+																			</h3>
+																		</div>
+																		<div class="col-xl-6 col-xxl-6 col-lg-6 col-12">
+																			<p class="fs-4 text-light-1 fw-6 mb-0" data-aos="fade-down" data-aos-delay="150">
+																						機能性細胞のスフェロイド、オルガノド、細胞シート等の人工組織の凍結保存技術の開発を、ポル･メド･テックが有するガラス化技術を駆使してお手伝いします
+																			</p>
+																		</div>
+																	</div>
+																	<div class="row justify-content-between align-item-center mb-4 mt-10">
+																		<div class="col-xl-12 col-lg-12">
+																			<p class="font-body text-light-1">
+																						ヒトや動物の受精卵凍結保存に用いられるガラス化技術を改良し、膵島、オルガノイド、人工組織(細胞シート)、胎仔臓器などの超低温ガラス化保存法を開発しました
+																			</p>
+																		</div>
+																	</div>
+																	<div class="row">
+																		<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+																			<div class="border rounded-2 h-100 p-6 border-light-2">
+																				<h5 class="text-light-1 font-heading fw-6 mb-4">
+																							膵島
+																				</h5>
+																				<p class="text-light-1 opacity-80 font-body fs-6 mb-0">
+																							Nagaya M, Matsunari H, Kanai T, Maehara M, Nakano K, Umeki I, Katsumata Y, Kasai Y, Sakai R, Kobayashi M, Honda K, Abe N, Watanabe M, Umeyama K, Nagashima H: An effective new cryopreservation procedure for pancreatic islets using hollow fiber vitrification. Hormone and Metabolic Research, 48(8):540-549, 2016.
+																				</p>
+																			</div>
+																		</div>
+																		<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+																			<div class="border rounded-2 h-100 p-6 border-light-2">
+																				<h5 class="text-light-1 font-heading fw-6 mb-4">
+																							ブタ胎仔腎臓
+																				</h5>
+																				<p class="text-light-1 opacity-80 font-body fs-6 mb-0">
+																							Matsumoto K, Yokoo T, Matsunari H, Iwai S, Yokote S, Teratani T, Gheisari Y, Tsuji O, Okano H, Utsunomiya Y, Hosoya T, Okano H.J, Nagashima H, Kobayashi E. Xenotransplanted embryonic kidney provides a niche for endogenous mesenchymal stem cell differentiation into erythropoietin-producing tissue. Stem Cells, 30:1228-35, 2012.
+																				</p>
+																			</div>
+																		</div>
+																		<div class="col-md-6 col-lg-4 mb-6" data-aos="fade-down" data-aos-delay="250">
+																			<div class="border rounded-2 h-100 p-6 border-light-2">
+																				<h5 class="text-light-1 font-heading fw-6 mb-4">
+																							細胞シート
+																				</h5>
+																				<p class="text-light-1 opacity-80 font-body fs-6 mb-0">
+																							Maehara M, Sato M, Watanabe M, Matsunari H, Kokubo M, Kanai T, Sato M, Matsumura K, Hyon SH, Yokoyama M, Mochida J, Nagashima H: Development of a novel vitrification method for chondrocyte sheets. BMC Biotechnology, 13:58, 2013.
+																				</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</section>
+															<!-- Testimonial 6 -->
+																<section class="py-lg-20 bg-bg-3 px-4 py-16" id="order">
+																	<div class="container">
+																		<div class="row justify-content-between align-items-center">
+																			<div class="col-lg-10 col-xl-12 mb-9">
+																				<h5 class="font-heading mb-4 text-dark-3" data-aos="fade-down" data-aos-delay="0">
+																							技術サービス事業
+																				</h5>
+																				<h2 class="mb-0 font-heading display-6 text-dark-2 opacity-80" data-aos="fade-down" data-aos-delay="0">
+																							遺伝子改変ブタ オーダーメイド生産
+																				</h2>
+																			</div>
+																			<div class="col-md-9 col-xxl-12 col-xl-12 col-lg-12">
+																				<p class="fs-4 fw-6 mb-8 text-dark-2 opacity-80" data-aos="fade-down" data-aos-delay="150">
+																							遺伝子改変ブタやクローンブタは、移植用のヒト臓器や組織の生産プラットフォーム（文献1〜3）として、また薬剤や治療法の開発や有効性検証のためのモデル（文献4）として注目されています。ユーザー様の使用目的に特化した遺伝子改変ブタやクローンブタを生産します
+																				</p>
+																			</div>
+																		</div>
+																		<div class="row">
+																			<div class="col-md-6 mb-6 col-lg-3" data-aos="fade-down" data-aos-delay="250">
+																				<div class="border rounded-2 h-100 p-6 border-light-2">
+																					<h5 class="fw-6 text-bg-2 mb-4">
+																								1
+																					</h5>
+																					<p class="font-body text-dark-3 fs-5 mb-0">
+																								T. Rashid, T. Kobayashi, H. Nakauchi: Revisiting the flight of Icarus: making human organs from PSCs with large animal chimeras
+																					</p>
+																				</div>
+																			</div>
+																			<div class="col-md-6 mb-6 col-lg-3" data-aos="fade-down" data-aos-delay="250">
+																				<div class="border rounded-2 h-100 p-6 border-light-2">
+																					<h5 class="fw-6 text-bg-2 mb-4">
+																								2
+																					</h5>
+																					<p class="font-body text-dark-3 fs-5 mb-sm-0">
+																								Cell Stem Cell, 15 (2014), pp. 406-409. Matsunari H, Nagashima H, Watanabe M, Umeyama K, Nakano K, Nagaya M, Kobayashi T, Yamaguchi T, Sumazaki R, Herzenberg L.A., Nakauchi H. Blastocyst complementation generates exogenic pancreas in vivo in apancreatic cloned pigs. Proc Natl Acad SciUSA, 110:4557-62. 2013.
+																					</p>
+																				</div>
+																			</div>
+																			<div class="col-md-6 mb-6 col-lg-3" data-aos="fade-down" data-aos-delay="250">
+																				<div class="border rounded-2 h-100 p-6 border-light-2">
+																					<h5 class="fw-6 text-bg-2 mb-4">
+																								3
+																					</h5>
+																					<p class="font-body text-dark-3 fs-5 mb-0">
+																								Yokote S, Matsunari H, Iwai S, Yamanaka S, Uchikura A, Fujimoto E, Matsumoto K, Nagashima H, Kobayashi E, Yokoo T: Urine excretion strategy for stem cell-generated embryonic kidneys. Proc Natl Acad Sci USA, 112: 12980-12985, 2015.
+																					</p>
+																				</div>
+																			</div>
+																			<div class="col-md-6 mb-6 col-lg-3" data-aos="fade-down" data-aos-delay="250">
+																				<div class="border rounded-2 h-100 p-6 border-light-2">
+																					<h5 class="fw-6 text-bg-2 mb-4">
+																								4
+																					</h5>
+																					<p class="font-body text-dark-3 fs-5 mb-0">
+																								McGonigle P, Ruggeri B: Animal models of human disease: Challenges in enabling translation. Biochemical Pharmacology, 87: 162-171, 2014.
+																					</p>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</section>
+																<!-- Content 6 -->
+																	<section class="py-lg-20 bg-action-6 px-4 py-16" id="profile">
+																		<div class="container">
+																			<div class="row justify-content-lg-between">
+																				<div class="col-lg-3">
+																					<h2 class="mb-4 text-light-1 font-heading mb-xxl-1 mb-lg-1" data-aos="fade-down" data-aos-delay="0">
+											会社概要
+																					</h2>
+																					<p class="font-body text-action-8 opacity-80">
+											Corporate Profile
+																					</p>
+																				</div>
+																				<div class="col-lg-9">
+																					<div class="border-action-8 border-top opacity-60 mb-4">
+																					</div>
+																					<div class="row">
+																						<div class="col-md-3 col-12 mb-2 mb-md-0">
+																							<div class="text-start py-xxl-1 font-body fw-bold text-action-8 opacity-80">
+													所在地
+																							</div>
+																						</div>
+																						<div class="col-md-9 col-12">
+																							<div class="py-xxl-1 text-start text-action-8 font-body" placeholder="">
+																										神奈川県川崎市多摩区三田　明治大学地域産学連携研究センター
+																							</div>
+																						</div>
+																					</div>
+																					<div class="border-action-8 border-top opacity-60 my-4">
+																					</div>
+																					<div class="row">
+																						<div class="col-md-3 col-12 mb-md-0 mb-1">
+																							<div class="text-start font-body fw-bold text-action-8 opacity-80 my-1">
+													設立経緯
+																							</div>
+																						</div>
+																						<div class="col-md-9 col-12">
+																							<div class="text-start text-action-8 font-body my-1" placeholder="">
+													明治大学バイオリソース研究国際インスティテュートにおける遺伝子改変ブタ作出技術の事業化を目的に2017年2月に設立
+																							</div>
+																							<div class="text-start text-action-8 font-body my-1" placeholder="">
+													神奈川県川崎市多摩区三田　明治大学地域産学連携研究センター
+																							</div>
+																						</div>
+																					</div>
+																					<div class="border-action-8 border-top opacity-60 my-4">
+																					</div>
+																					<div class="row">
+																						<div class="col-md-3 col-12 mb-1 mb-md-0">
+																							<div class="text-start font-body fw-bold text-action-8 opacity-80 my-1">
+													事業内容
+																							</div>
+																						</div>
+																						<div class="col-md-9 col-12">
+																							<div class="text-start text-action-8 font-body my-1" placeholder="">
+													医療用ブタによる臓器移植・再生医療事業
+																							</div>
+																							<div class="text-start text-action-8 font-body my-1" placeholder="">
+													疾患モデルブタの製造販売事業
+																							</div>
+																							<div class="text-start text-action-8 font-body my-1" placeholder="">
+													技術サービス事業
+																							</div>
+																						</div>
+																					</div>
+																					<div class="border-action-8 border-top opacity-60 my-4">
+																					</div>
+																					<div class="row">
+																						<div class="col-md-3 col-12 mb-1 mb-md-0">
+																							<div class="text-start font-body fw-bold text-action-8 opacity-80 my-1">
+													株主
+																							</div>
+																						</div>
+																						<div class="col-md-9 col-12">
+																							<div class="text-start text-action-8 font-body my-1" placeholder="">
+													エムスリー・グループ (東証1部上場）
+																							</div>
+																							<div class="text-start text-action-8 font-body my-1" placeholder="">
+													Eight Roads Ventures（米国 フィデリティ･グループ）
+																							</div>
+																							<div class="text-start text-action-8 font-body my-1" placeholder="">
+													経営陣
+																							</div>
+																						</div>
+																					</div>
+																					<div class="border-action-8 border-top opacity-60 my-4">
+																					</div>
+																					<div class="row">
+																						<div class="col-md-3 col-12 mb-1 mb-md-0">
+																							<div class="text-start font-body fw-bold text-action-8 opacity-80 my-1">
+													従業員
+																							</div>
+																						</div>
+																						<div class="col-md-9 col-12">
+																							<div class="text-start text-action-8 font-body my-1" placeholder="">
+													10名（役員除く）
+																							</div>
+																							<div class="text-start text-action-8 font-body fs-6" placeholder="">
+													※2021年11月現在
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</section>
+																	<!-- Feature 4 -->
+																		<section class="py-lg-20 bg-bg-3 py-16 px-4" id="team">
+																			<div class="container" name="team">
+																				<div class="row">
+																					<div class="col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+																						<h2 class="font-heading text-bg-2 mb-1" data-aos="fade-down" data-aos-delay="0">
+												経営陣
+																						</h2>
+																						<p class="font-body text-action-6">
+												Management Team
+																						</p>
+																					</div>
+																				</div>
+																				<div class="row">
+																					<div class="mb-10 col-12" data-aos="fade-down" data-aos-delay="250">
+																						<div class="border-bottom border-bottom-dark-2 opacity-30">
+																						</div>
+																					</div>
+																					<div class="mb-8 mb-md-0 col-md-6 mb-xxl-6 col-sm-12" data-aos="fade-down" data-aos-delay="500">
+																						<h4 class="font-heading mb-2">
+												長嶋 比呂志
+																						</h4>
+																						<h6 class="mb-4 font-heading text-action-6">
+												代表取締役 チーフサイエンティスト
+																						</h6>
+																						<p class="font-body text-dark-1 mb-3">
+												明治大学農学部生命科学科教授 同大学バイオリソース研究国際インスティテュート所長
+																						</p>
+																						<p class="font-body text-dark-1 mb-3">
+																									日清製粉中央研究所研究員、豪アデレード大学医学部産婦人科研究室客員研究員、豪ブリザジェンリミテッド主任研究員、大阪大学医学部付属バイオメディカル教育研究センター 臓器制御部門 臓器移植学研究部研究員などを経て、1999年より明治大学農学部勤務。臓器再生や稀少・難治性疾患の克服を目標として、遺伝子改変ブタやクローンブタを用いたトランスレーショナル・リサーチに取り組んでいる
+																						</p>
+																						<p class="font-body text-dark-1 mb-4">
+																									農学博士（東京大学大学院農学系研究科博士課程修了） 専門は発生工学、生殖生物学
+																						</p>
+																					</div>
+																					<div class="mb-8 mb-md-0 col-md-6 mb-xxl-6 col-sm-12" data-aos="fade-down" data-aos-delay="500">
+																						<h4 class="font-heading mb-2">
+												三輪 玄二郎
+																						</h4>
+																						<h6 class="mb-4 font-heading text-action-6">
+												取締役 創業者
+																						</h6>
+																						<p class="font-body text-dark-1 mb-3">
+												iPS血小板開発会社 メガカリオン 創業者・取締役会長 
+																							<br>再生医療特許管理会社 iCELL 共同創業者・代表取締役
+																							<br>
+投資会社アルディート・アセット・マネジメント共同創業者取締役 
+																						</p>
+																						<p class="font-body text-dark-1 mb-3">
+												米Bain &amp; Companyを経て、培養皮膚開発を手掛けるBioSurface Technology（現、Sanofiの一部門）を共同創業
+																						</p>
+																						<p class="font-body text-dark-1 mb-3">
+												東京大学経済学部卒業 ハーバード大学経営大学院修了（MBA with Distinction）
+																							<br>
+世界経済フォーラム(ダボス会議）評議員
+																						</p>
+																					</div>
+																					<div class="mb-8 mb-md-0 col-md-6 mb-xxl-6 col-sm-12" data-aos="fade-down" data-aos-delay="500">
+																						<h4 class="font-heading mb-2">
+												松本 慎一
+																						</h4>
+																						<h6 class="mb-4 font-heading text-action-6">
+												取締役 異種膵島移植事業担当
+																						</h6>
+																						<p class="font-body text-dark-1 mb-3">
+												ミネソタ大学時代に、現在の米国の膵島移植の標準となる膵島分離法をDr.Heringとともに開発。ワシントン大学時代に、米国北西部で1例目の膵島移植を実施。京都大学時代の2004年に、日本で1例目の膵島移植を成功させ、さらに、2005年に世界で初めての親子間の生体ドナー膵島移植を成功させる。ベイラー大学病院時代に、同地区で初めての膵島移植を成功させるとともに、膵島移植の成績を飛躍的に改善させた
+																						</p>
+																						<p class="font-body text-dark-1 mb-3">
+												1988年神戸大学医学部卒業
+																							<br>
+1996年医学博士取得（神戸大学大学院医学系研究科修了：外科学）
+																							<br>
+1997年ミネソタ大学外科ポスドク研究員
+																							<br>
+1999年ワシントン大学（シアトル）リサーチアソシエイト
+																							<br>
+2002年京都大学医学部附属病院臓器移植医療部助手
+																							<br>
+2006年藤田医科大学消化器第二外科教授
+																							<br>
+2007年ベイラー大学病院膵島移植プログラムディレクター
+																						</p>
+																					</div>
+																					<div class="mb-8 mb-md-0 col-md-6 mb-xxl-6 col-sm-12" data-aos="fade-down" data-aos-delay="500">
+																						<h4 class="font-heading mb-2">
+												小坂井 康宏
+																						</h4>
+																						<h6 class="mb-4 font-heading text-action-6">
+												取締役 COO
+																						</h6>
+																						<p class="font-body text-dark-1 mb-3">
+												三井物産株式会社にて、国内・海外向けメディカル・ヘルスケア関連の新規事業立ち上げ、M&amp;A、事業投資、企業経営・投資支援、イタリア駐在等多岐にわたり事業活動に携わる。協和発酵キリン株式会社では国内・欧米大手製薬、バイオテクノロジー企業とのライセンス含めた事業開発、アライアンスマネジメント、戦略企画、R&amp;Dポートフォリオマネジメント等を担う
+																						</p>
+																						<p class="font-body text-dark-1 mb-3">
+												ロンドン大学経営大学院(London Business School) 経営学修士（MBA）
+																							<br>同志社大学法学部卒
+																						</p>
+																					</div>
+																					<div class="mb-8 mb-md-0 col-md-6 mb-xxl-6 col-sm-12" data-aos="fade-down" data-aos-delay="500">
+																						<h4 class="font-heading mb-2">
+												梅田 和宏
+																						</h4>
+																						<h6 class="mb-4 font-heading text-action-6">
+												取締役
+																						</h6>
+																						<p class="font-body text-dark-1 mb-3">
+												2005年日本アジア投資㈱入社。シリコンバレー駐在員、シンガポール等の東南アジア各国の現地法人社長、東京本社社長室長、2013年㈱産業革新機構（現㈱INCJ）等を歴任。2016年エムスリーアイ㈱代表取締役社長（現任）、2017年12月（株）ステムリム社外取締役（現任）
+																						</p>
+																					</div>
+																					<div class="mb-8 mb-md-0 col-md-6 mb-xxl-6 col-sm-12" data-aos="fade-down" data-aos-delay="500">
+																						<h4 class="font-heading mb-2">
+												香本 慎一郎
+																						</h4>
+																						<h6 class="mb-4 font-heading text-action-6">
+												取締役
+																						</h6>
+																						<p class="font-body text-dark-1 mb-3">
+												米金融大手Fidelityの資金を活用した国内VCであるエイトローズにて、ヘルスケア分野の投資・育成の責任者
+																						</p>
+																						<p class="font-body text-dark-1 mb-3">
+												18年在籍した三井物産では、IT及びヘルスケア領域にて新規事業創出、M&amp;A、 企業経営に携わる。米国・シンガポール・ベトナムに計９年駐在
+																						</p>
+																						<p class="font-body text-dark-1 mb-4">
+												東京都立大学（電気工学科） 
+																							<br>INSEAD（Executive Educational Program）
+																						</p>
+																					</div>
+																					<div class="mb-8 mb-md-0 col-md-6 mb-xxl-6 col-sm-12" data-aos="fade-down" data-aos-delay="500">
+																						<h4 class="font-heading mb-2">
+												永井 宏忠
+																						</h4>
+																						<h6 class="mb-4 font-heading text-action-6">
+												取締役
+																						</h6>
+																						<p class="font-body text-dark-1 mb-3">
+												株式会社京屋（化学工業薬品商社）取締役
+																						</p>
+																						<p class="font-body text-dark-1 mb-3">
+												厚生労働省　医薬食品局にて食品安全部基準課、総務課薬事情報専門官、 医政局にて医療経営支援課、研究開発振興課　等の職務を歴任
+																						</p>
+																						<p class="font-body text-dark-1 mb-4">
+												医薬品医療機器総合機構　医療機器審査第一部、 産業革新機構　戦略投資グループ健康・医療チームへの出向経験
+																						</p>
+																						<p class="font-body text-dark-1 mb-4">
+												岐阜市立岐阜薬科大学大学院 薬学研究科博士前期課程修了
+																						</p>
+																					</div>
+																					<div class="mb-8 mb-md-0 col-md-6 mb-xxl-6 col-sm-12" data-aos="fade-down" data-aos-delay="500">
+																						<h4 class="font-heading mb-2">
+												中塚 琢磨
+																						</h4>
+																						<h6 class="mb-4 font-heading text-action-6">
+												監査役
+																						</h6>
+																						<p class="font-body text-dark-1 mb-3">
+												NapaJen Pharma, Inc. CFO
+																						</p>
+																						<p class="font-body text-dark-1 mb-3">
+												内閣官房、外務省、総務庁等を経て、アンジェスMG、ナノキャリア、ジェノミデイア、クオンタムバイオ、日本シェーリング、ホソカワミクロング、VeoliaWater、西原環境テクノロジー、西原テクノサービス等にてマネジメント職を歴任
+																						</p>
+																						<p class="font-body text-dark-1 mb-4">
+												東京大学法学部卒業。ミシガン大大学院修士（経済・公共政策） ペンシルバニア大経営大学院ウォートン・スクールMBA
+																						</p>
+																					</div>
+																				</div>
+																			</div>
+																		</section>
+																		<!-- Contact 4 -->
+																			<section class="py-lg-20 bg-bg-1 py-16 px-4" id="contact">
+																				<div class="container">
+																					<div class="row justify-content-between mb-8">
+																						<div class="col-md-6 col-lg-5 mb-12 mb-md-0 col-sm-12">
+																							<h2 class="text-light-1 font-heading mb-1" data-aos="fade-down" data-aos-delay="0">
+													お問い合わせ
+																							</h2>
+																							<p class="text-action-1 mb-12">
+																Contact Us
+																							</p>
+																							<p class="text-light-2 font-body mb-12" data-aos="fade-down" data-aos-delay="150">
+													ご質問･ご意見などはフォームより受け付けております
+																							</p>
+																							<div class="position-relative mb-5" data-aos="fade-down" data-aos-delay="250">
+																								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-action-1 position-absolute top-0 start-0">
+																									<path fill-rule="evenodd" clip-rule="evenodd" d="M17 2H8C7.60218 2 7.22064 2.15804 6.93934 2.43934C6.65804 2.72064 6.5 3.10218 6.5 3.5V21.5C6.5 21.8978 6.65804 22.2794 6.93934 22.5607C7.22064 22.842 7.60218 23 8 23H17C17.3978 23 17.7794 22.842 18.0607 22.5607C18.342 22.2794 18.5 21.8978 18.5 21.5V3.5C18.5 3.10218 18.342 2.72064 18.0607 2.43934C17.7794 2.15804 17.3978 2 17 2ZM8 0.5C7.20435 0.5 6.44129 0.816071 5.87868 1.37868C5.31607 1.94129 5 2.70435 5 3.5V21.5C5 22.2956 5.31607 23.0587 5.87868 23.6213C6.44129 24.1839 7.20435 24.5 8 24.5H17C17.7956 24.5 18.5587 24.1839 19.1213 23.6213C19.6839 23.0587 20 22.2956 20 21.5V3.5C20 2.70435 19.6839 1.94129 19.1213 1.37868C18.5587 0.816071 17.7956 0.5 17 0.5L8 0.5Z">
+																									</path>
+																									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 21.5C12.8978 21.5 13.2794 21.342 13.5607 21.0607C13.842 20.7794 14 20.3978 14 20C14 19.6022 13.842 19.2206 13.5607 18.9393C13.2794 18.658 12.8978 18.5 12.5 18.5C12.1022 18.5 11.7206 18.658 11.4393 18.9393C11.158 19.2206 11 19.6022 11 20C11 20.3978 11.158 20.7794 11.4393 21.0607C11.7206 21.342 12.1022 21.5 12.5 21.5Z">
+																									</path>
+																								</svg>
+																								<p class="ps-10 mb-0 fs-4 text-action-8 font-body">
+														044-387-3345
+																								</p>
+																							</div>
+																							<div class="position-relative mb-5" data-aos="fade-down" data-aos-delay="400">
+																								<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-action-1 position-absolute top-0 start-0">
+																									<path fill-rule="evenodd" clip-rule="evenodd" d="M21.5002 5H3.50024C3.10242 5 2.72089 5.15804 2.43958 5.43934C2.15828 5.72064 2.00024 6.10218 2.00024 6.5V6.82525L12.5002 13.1255L23.0002 6.82518V6.5C23.0002 6.10218 22.8422 5.72064 22.5609 5.43934C22.2796 5.15804 21.8981 5 21.5002 5ZM0.500244 7.27068C0.499919 7.25793 0.499919 7.24517 0.500244 7.23241V6.5C0.500244 5.70435 0.816315 4.94129 1.37892 4.37868C1.94153 3.81607 2.70459 3.5 3.50024 3.5H21.5002C22.2959 3.5 23.059 3.81607 23.6216 4.37868C24.1842 4.94129 24.5002 5.70435 24.5002 6.5V7.2394V7.2606V18.5C24.5002 19.2956 24.1842 20.0587 23.6216 20.6213C23.059 21.1839 22.2959 21.5 21.5002 21.5H3.50024C2.70459 21.5 1.94153 21.1839 1.37892 20.6213C0.816315 20.0587 0.500244 19.2956 0.500244 18.5V7.27068ZM23.0002 17.194V8.57474L15.7162 12.945L23.0002 17.194ZM22.9461 18.8995L14.3722 13.898L14.2482 13.8257L12.5002 14.8745L10.7519 13.8258L10.6282 13.898L2.05439 18.8994C2.12287 19.1473 2.25456 19.3756 2.43958 19.5607C2.72089 19.842 3.10242 20 3.50024 20H21.5002C21.8981 20 22.2796 19.842 22.5609 19.5607C22.7459 19.3757 22.8776 19.1473 22.9461 18.8995ZM2.00024 17.194V8.57616L9.28386 12.9452L2.00024 17.194Z">
+																									</path>
+																								</svg>
+																								<p class="ps-10 mb-0 fs-4 text-action-8 font-body">
+														info@pormedtec.com
+																								</p>
+																							</div>
+																							<div class="position-relative" data-aos="fade-down" data-aos-delay="500">
+																								<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-action-1 position-absolute top-0 start-0">
+																									<path fill-rule="evenodd" clip-rule="evenodd" d="M24.2255 0.919479C24.3114 0.989882 24.3805 1.07848 24.428 1.17887C24.4755 1.27925 24.5001 1.38893 24.5 1.49998V21C24.4999 21.1733 24.4398 21.3412 24.3298 21.4752C24.2199 21.6092 24.067 21.701 23.897 21.735L16.397 23.235C16.3 23.2543 16.2 23.2543 16.103 23.235L8.75 21.765L1.397 23.235C1.28823 23.2567 1.176 23.2541 1.06838 23.2272C0.960764 23.2003 0.860444 23.15 0.774649 23.0797C0.688854 23.0093 0.61972 22.9209 0.572228 22.8207C0.524735 22.7204 0.500067 22.6109 0.5 22.5V2.99998C0.500105 2.82666 0.560234 2.65873 0.670165 2.52473C0.780096 2.39074 0.933042 2.29895 1.103 2.26498L8.603 0.764979C8.70004 0.745583 8.79996 0.745583 8.897 0.764979L16.25 2.23498L23.603 0.764979C23.7117 0.743103 23.824 0.745613 23.9316 0.772329C24.0392 0.799045 24.1396 0.849301 24.2255 0.919479ZM15.5 3.61498L9.5 2.41498V20.385L15.5 21.585V3.61498ZM17 21.585L23 20.385V2.41498L17 3.61498V21.585ZM8 20.385V2.41498L2 3.61498V21.585L8 20.385Z">
+																									</path>
+																								</svg>
+																								<p class="ps-10 mb-0 fs-4 remove-br font-body text-action-8">
+																											〒2140034
+																									<br>神奈川県川崎市多摩区三田2-3227
+																									<br>明治大学地域産学連携研究センター
+																								</p>
+																							</div>
+																						</div>
+																						<div class="col-md-5 col-xl-4 col-sm-12" data-aos="fade-down" data-aos-delay="650">
+																							<form action="form-handler.php" method="post" enctype="multipart/form-data" class="js-ajax-form">
+																								<!-- forms alerts -->
+																									<div class="alert alert-action-8 fixed-top invisible fade js-ajax-form-result" data-result="success" role="alert">
+																										<span class="js-ajax-form-alert-text" data-default-text="Thanks for your message!">
+																フォーム入力内容を送信いたしました。担当者よりご連絡差し上げますので、お待ちくださいませ。
+																										</span>
+																									</div>
+																									<div class="alert alert-action-5 fixed-top invisible fade js-ajax-form-result" data-result="error" role="alert">
+																										<span class="js-ajax-form-alert-text">
+																エラーが発生しました
+																										</span>
+																									</div>
+																									<!-- forms alerts end -->
+																										<input type="text" name="name" placeholder="お名前" class="mb-6 form-control border border-light-3 text-light-1" required="required">
+																										<input type="text" name="company" placeholder="企業･組織名" class="mb-6 form-control border border-light-3 text-light-1" required="required">
+																										<input type="email" name="email" placeholder="メールアドレス" class="mb-6 form-control border border-light-3 text-light-1" required="required">
+																										<textarea name="message" placeholder="お問い合わせ内容" class="mb-6 form-control border text-light-1 border-light-3 rounded-2" rows="5" required="required"></textarea>
+																										<label class="form-check mb-6">
+																											<input class="form-check-input basic-action-8 checked-action-6" type="checkbox" name="checkbox" checked="checked">
+																											<a href="privacy.html" class="font-body fs-5" data-bs-target="">
+																	プライバシーポリシー
+																											</a>
+																											<span class="form-check-label fs-5 text-light-1">
+																	に同意する
+																											</span>
+																										</label>
+																										<button class="btn btn-action-1 w-100 text-action-8 font-body fw-6">
+																内容を送信する
+																										</button>
+																									</form>
+																								</div>
+																							</div>
+																						</div>
+																					</section>
+																					<!-- Footer 1 -->
+																						<footer class="bg-dark-2 pb-xxl-8 pb-xl-8 pb-lg-10 pt-sm-12 px-4 pt-12 pt-lg-10 pb-4 pt-xl-8 pt-xxl-8">
+																							<div class="container mt-xxl-8">
+																								<div class="row mb-12">
+																									<div class="mb-8 col-xxl-4 col-md-12 col-xl-3">
+																										<a href="#">
+																											<img src="i/logow.svg" alt="" class="img-fluid" data-aos="fade-down" data-aos-delay="0" srcset="i/logow.svg 2x">
+																										</a>
+																									</div>
+																									<div class="mb-sm-8 col-sm-6 mb-4 col-md-6 mb-lg-0 mb-md-4 col-xl-2 col-lg-3" data-aos="fade-down" data-aos-delay="150">
+																										<h5 class="mb-4 font-heading text-light-2 fw-6">
+													企業情報
+																										</h5>
+																										<a href="#profile" class="me-2 me-sm-0 d-sm-block text-light-1 font-body fs-5 mb-3">
+													会社概要
+																										</a>
+																										<a href="#team" class="me-2 me-sm-0 d-sm-block text-light-1 font-body fs-5 mb-3">
+																経営陣
+																										</a>
+																									</div>
+																									<div class="mb-sm-8 col-sm-6 mb-4 col-md-6 mb-md-4 mb-lg-0 col-xl-2 col-lg-3" data-aos="fade-down" data-aos-delay="250">
+																										<h5 class="mb-4 font-heading text-light-2 fw-6">
+													パイプライン
+																										</h5>
+																										<a href="#xeno" class="me-2 me-sm-0 d-sm-block text-light-1 mb-3 font-body fs-5">
+													異種膵島移植事業
+																										</a>
+																										<a href="#kidney" class="me-2 me-sm-0 d-sm-block text-light-1 mb-3 font-body fs-5">
+																ヒト化腎臓移植事業
+																										</a>
+																									</div>
+																									<div class="mb-sm-8 mb-sm-0 col-sm-6 mb-4 col-md-6 mb-md-4 mb-lg-0 col-xl-2 col-lg-3" data-aos="fade-down" data-aos-delay="400">
+																										<h5 class="mb-4 font-heading text-light-2 fw-6">
+													プラットフォーム
+																										</h5>
+																										<a href="#platform" class="me-2 me-sm-0 d-sm-block text-light-1 mb-3 font-body fs-5" data-bs-target="">
+													遺伝子改変ブタ
+																										</a>
+																										<a href="#dpf" class="me-2 me-sm-0 d-sm-block text-light-1 mb-3 font-body fs-5">
+													医療用指定病原体フリーブタ
+																										</a>
+																										<a href="#organ" class="me-2 me-sm-0 d-sm-block text-light-1 mb-3 font-body fs-5">
+													ヒト化臓器作出技術
+																										</a>
+																									</div>
+																									<div class="col-sm-6 col-md-6 mb-4 mb-sm-8 mb-md-4 mb-lg-0 col-lg-3 col-xxl-2 col-xl-3" data-aos="fade-down" data-aos-delay="500">
+																										<h5 class="mb-4 font-heading text-light-2 fw-6">
+													技術サービス
+																										</h5>
+																										<a href="#service" class="me-2 me-sm-0 d-sm-block text-light-1 mb-3 font-body fs-5">
+													凍結保存技術支援
+																										</a>
+																										<a href="#order" class="me-2 me-sm-0 d-sm-block text-light-1 mb-3 font-body fs-5">
+													オーダーメイド遺伝子改変ブタ
+																										</a>
+																									</div>
+																								</div>
+																								<div class="border-top border-action-8 pb-xxl-4 opacity-20 mb-lg-4 mb-xxl-0">
+																								</div>
+																								<div class="border-action-8 opacity-40 row">
+																									<div class="lh-lg col-6 d-none d-md-block my-4 my-lg-0">
+																										<p class="fs-6 font-body text-action-8 my-0" data-aos="fade-down" data-aos-delay="650">
+																Copyright © PorMedTec Co., Ltd. All Rights Reserved.
+																										</p>
+																									</div>
+																									<div class="text-end col-12 my-4 my-lg-0 col-md-6" data-aos="fade-down" data-aos-delay="750">
+																										<a href="terms.html" class="font-body fs-6 lh-lg text-light-1 opacity-100 fw-6 me-4 text-center" data-bs-target="">
+																利用規約
+																										</a>
+																										<a href="privacy.html" class="font-body lh-lg ms-xxl-4 fs-6 opacity-100 text-action-8 fw-6" data-bs-target="">
+																													プライバシーポリシー
+																										</a>
+																									</div>
+																								</div>
+																							</div>
+																						</footer>
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- AOS 3.0.0-beta.6 plugin JS (Animations) -->
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		
+		<!-- Startup JS (Custom js for all blocks) - Remove ".min" if you want to edit a JS code -->
+		<script src="js/scripts.min.js"></script>
+		<script>
+			$(window).scroll(function() {
+			var scroll = $(window).scrollTop();
+			if ($(window).scrollTop() >= 10 && $(window).width() > 991) {
+			$("nav").addClass("bg-bg-1");
+			$(".blacknavbar").removeClass("text-dark-1").addClass("text-light-1");
+			} else{
+			$("nav").removeClass("bg-bg-1");
+			$(".blacknavbar").removeClass("text-light-1").addClass("text-dark-1");
+			}
+			});
+			$(window).trigger("scroll");
+		</script
+	</body>
+</html>
